@@ -6,8 +6,9 @@ description: This is my personal OS image.
 
 
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 42
-
+image-version: 41
+alt-tags:
+  - stable
 modules:
   - from-file: common/01-base.yml
   - from-file: common/10-base-kde.yml

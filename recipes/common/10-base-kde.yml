@@ -1,20 +1,15 @@
 modules:
-  - type: rpm-ostree
-    install:
-      - btop
-    remove:
-      - firefox
-      - firefox-langpacks
-
   - type: default-flatpaks
     notify: true
     system:
       install:
-        - org.mozilla.firefox
         - org.kde.okular
         - org.kde.kate
         - org.kde.yakuake
       remove:
         - org.kde.kmahjongg
 
-    user: {}
+  - type: script
+    snippets:
+      - "for f in /usr/share/config.kcfg/splash*.kcfg; do sed -i 's#<default>org.kde.breeze.desktop</default>#<default>eu-os</default>#g' $f; done"
+

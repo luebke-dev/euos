@@ -1,0 +1,10 @@
+modules:
+  - type: default-flatpaks
+    notify: true
+    system:
+      install:
+        - org.kde.okular
+        - org.kde.kate
+        - org.kde.yakuake
+      remove:
+        - org.kde.kmahjongg

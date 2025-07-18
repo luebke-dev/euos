@@ -1,0 +1,24 @@
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+  - type: dnf
+    install:
+      packages:
+        - btop
+
+  - type: default-flatpaks
+    notify: true
+    system:
+      install:
+        - org.mozilla.firefox
+
+    user: {}
+
+  - type: os-release
+    properties:
+      ID: eu-os
+      NAME: EU-OS
+      PRETTY_NAME: EU-OS
+      HOME_URL: https://eu-os.eu
