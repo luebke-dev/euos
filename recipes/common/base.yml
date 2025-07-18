@@ -1,4 +1,11 @@
 modules:
+  - type: rpm-ostree
+    install:
+      - btop
+    remove:
+      - firefox
+      - firefox-langpacks
+
   - type: default-flatpaks
     notify: true
     system:
