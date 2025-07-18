@@ -1,8 +1,4 @@
 modules:
-  - type: script
-    snippets:
-      - "for f in /usr/share/config.kcfg/splash*.kcfg; do sed -i 's#<default>org.kde.breeze.desktop</default>#<default>eu-os</default>#g' $f; done"
-
   - type: dnf
     install:
       packages:
