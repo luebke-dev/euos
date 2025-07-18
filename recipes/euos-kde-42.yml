@@ -13,7 +13,7 @@ modules:
     files:
       - source: system
         destination: /
-
+  - from-file: common/base.yml
   - type: rpm-ostree
     install:
       - micro
